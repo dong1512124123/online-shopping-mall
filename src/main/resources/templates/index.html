@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASHION STORE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 상단바 -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- 히어로 배너 -->
+<section class="hero-banner">
+    <div class="container text-center py-5" style="padding-bottom: 0.5rem !important;">
+        <h1 class="hero-title">NEW ARRIVALS</h1>
+        <p class="hero-subtitle">2026 S/S COLLECTION</p>
+    </div>
+</section>
+
+<!-- 프로모션 캐러셀 -->
+<section class="container mt-1 mb-5">
+    <div id="promoCarousel" class="carousel slide promo-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- 슬라이드 1: 할인 상품 -->
+            <div class="carousel-item active">
+                <div class="promo-slide promo-slide-sale">
+                    <div class="promo-content">
+                        <span class="promo-tag">SALE</span>
+                        <h2 class="promo-heading">SEASON OFF</h2>
+                        <p class="promo-desc">최대 50% 할인 중인 특가 아이템을 만나보세요</p>
+                        <a href="/category/OUTLET" class="btn btn-sm promo-btn">할인 상품 보기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 2: 쿠폰 -->
+            <div class="carousel-item">
+                <div class="promo-slide promo-slide-coupon">
+                    <div class="promo-content">
+                        <span class="promo-tag">COUPON</span>
+                        <h2 class="promo-heading">WELCOME 10%</h2>
+                        <p class="promo-desc">신규 회원가입 시 10% 할인 쿠폰 즉시 지급</p>
+                        <a href="/auth/register" class="btn btn-sm promo-btn">회원가입 하기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 3: 이벤트 -->
+            <div class="carousel-item">
+                <div class="promo-slide promo-slide-event">
+                    <div class="promo-content">
+                        <span class="promo-tag">EVENT</span>
+                        <h2 class="promo-heading">FREE SHIPPING</h2>
+                        <p class="promo-desc">5만원 이상 구매 시 무료배송 이벤트 진행 중</p>
+                        <a href="/category/WOMAN" class="btn btn-sm promo-btn">쇼핑하러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<!-- 신상품 -->
+<section class="container my-5">
+    <h5 class="section-title">RECOMMEND</h5>
+    <p class="section-subtitle">이번 시즌 추천 아이템</p>
+    <div class="row g-3">
+        <div class="col-6 col-md-3" th:each="product : ${newProducts}" th:if="${#lists.size(newProducts) > 0}">
+            <a th:href="@{/product/{id}(id=${product.id})}" class="text-decoration-none">
+                <div class="product-card position-relative">
+                    <div class="product-img-placeholder" style="background-color: #f0f0f0;">
+                        <img th:if="${product.imageUrl != null}" th:src="${product.imageUrl}" th:alt="${product.name}">
+                        <span th:if="${product.imageUrl == null}">NO IMAGE</span>
+                        <span th:if="${product.new}" class="product-badge badge-new">NEW</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name" th:text="${product.name}">상품명</p>
+                        <p class="product-price"
+                           th:text="${#numbers.formatInteger(product.price, 0, 'COMMA')} + '원'">0원</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 상품 없을 때 -->
+        <div th:if="${#lists.size(newProducts) == 0}" class="col-12 text-center py-4">
+            <p class="text-muted" style="font-size: 13px;">상품 준비 중입니다.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 랭킹 상품 -->
+<section class="container my-5">
+    <h5 class="section-title">RANKING</h5>
+    <p class="section-subtitle">실시간 인기 상품</p>
+    <div class="row g-3">
+        <div class="col-6 col-md-3" th:each="product : ${rankingProducts}" th:if="${#lists.size(rankingProducts) > 0}">
+            <a th:href="@{/product/{id}(id=${product.id})}" class="text-decoration-none">
+                <div class="product-card position-relative">
+                    <div class="product-img-placeholder" style="background-color: #f5f5f5;">
+                        <img th:if="${product.imageUrl != null}" th:src="${product.imageUrl}" th:alt="${product.name}">
+                        <span th:if="${product.imageUrl == null}">NO IMAGE</span>
+                        <span th:if="${product.sale}" class="product-badge badge-sale">SALE</span>
+                        <span th:if="${product.new && !product.sale}" class="product-badge badge-new">NEW</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name" th:text="${product.name}">상품명</p>
+                        <div class="d-flex align-items-center gap-1">
+                            <span th:if="${product.sale}" class="product-discount"
+                                  th:text="${product.discountPercent} + '%'">20%</span>
+                            <span class="product-price"
+                                  th:text="${#numbers.formatInteger(product.price, 0, 'COMMA')} + '원'">0원</span>
+                        </div>
+                        <span th:if="${product.originalPrice != null && product.sale}" class="product-original-price"
+                              th:text="${#numbers.formatInteger(product.originalPrice, 0, 'COMMA')} + '원'">0원</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div th:if="${#lists.size(rankingProducts) == 0}" class="col-12 text-center py-4">
+            <p class="text-muted" style="font-size: 13px;">상품 준비 중입니다.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 세일 상품 -->
+<section class="container my-5">
+    <h5 class="section-title">SALE</h5>
+    <p class="section-subtitle">놓치면 후회할 특가 아이템</p>
+    <div class="row g-3">
+        <div class="col-6 col-md-3" th:each="product : ${saleProducts}" th:if="${#lists.size(saleProducts) > 0}">
+            <a th:href="@{/product/{id}(id=${product.id})}" class="text-decoration-none">
+                <div class="product-card position-relative">
+                    <div class="product-img-placeholder" style="background-color: #fff5f5;">
+                        <img th:if="${product.imageUrl != null}" th:src="${product.imageUrl}" th:alt="${product.name}">
+                        <span th:if="${product.imageUrl == null}">NO IMAGE</span>
+                        <span class="product-badge badge-sale">SALE</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name" th:text="${product.name}">상품명</p>
+                        <div class="d-flex align-items-center gap-1">
+                            <span class="product-discount"
+                                  th:text="${product.discountPercent} + '%'">20%</span>
+                            <span class="product-price"
+                                  th:text="${#numbers.formatInteger(product.price, 0, 'COMMA')} + '원'">0원</span>
+                        </div>
+                        <span th:if="${product.originalPrice != null}" class="product-original-price"
+                              th:text="${#numbers.formatInteger(product.originalPrice, 0, 'COMMA')} + '원'">0원</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div th:if="${#lists.size(saleProducts) == 0}" class="col-12 text-center py-4">
+            <p class="text-muted" style="font-size: 13px;">상품 준비 중입니다.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 푸터 -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f5f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Knit/Sweater -->
+    <path d="M-55,-80 L-85,-28 L-65,-8 L-50,-22 L-50,85 Q-50,93 -42,93 L42,93 Q50,93 50,85 L50,-22 L65,-8 L85,-28 L55,-80 L25,-80 Q10,-60 0,-64 Q-10,-60 -25,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-80 L-85,-28 L-65,-8 L-50,-22 L-50,85 Q-50,93 -42,93 L42,93 Q50,93 50,85 L50,-22 L65,-8 L85,-28 L55,-80 L25,-80 Q10,-60 0,-64 Q-10,-60 -25,-80 Z"/>
+    <!-- V-neck -->
+    <path d="M-25,-80 L0,-50 L25,-80"/>
+    <!-- Cable knit pattern -->
+    <path d="M-15,-30 Q-5,-20 -15,-10 Q-5,0 -15,10 Q-5,20 -15,30" stroke-width="2" opacity="0.3"/>
+    <path d="M15,-30 Q5,-20 15,-10 Q5,0 15,10 Q5,20 15,30" stroke-width="2" opacity="0.3"/>
+    <path d="M0,-30 Q10,-20 0,-10 Q10,0 0,10 Q10,20 0,30" stroke-width="2" opacity="0.3"/>
+    <!-- Ribbing -->
+    <path d="M-50,85 L-50,93" stroke-dasharray="3,3"/>
+    <path d="M-30,85 L-30,93" stroke-dasharray="3,3"/>
+    <path d="M-10,85 L-10,93" stroke-dasharray="3,3"/>
+    <path d="M10,85 L10,93" stroke-dasharray="3,3"/>
+    <path d="M30,85 L30,93" stroke-dasharray="3,3"/>
+    <path d="M50,85 L50,93" stroke-dasharray="3,3"/>
+  </g>
+</svg>

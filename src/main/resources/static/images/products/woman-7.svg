@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f3f0f2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Knit top -->
+    <path d="M-45,-75 L-70,-30 L-55,-15 L-42,-28 L-42,60 Q-42,68 -34,68 L34,68 Q42,68 42,60 L42,-28 L55,-15 L70,-30 L45,-75 L20,-75 Q8,-55 0,-60 Q-8,-55 -20,-75 Z" fill="#333" opacity="0.15"/>
+    <path d="M-45,-75 L-70,-30 L-55,-15 L-42,-28 L-42,60 Q-42,68 -34,68 L34,68 Q42,68 42,60 L42,-28 L55,-15 L70,-30 L45,-75 L20,-75 Q8,-55 0,-60 Q-8,-55 -20,-75 Z"/>
+    <!-- Turtleneck -->
+    <path d="M-20,-75 L-20,-90 Q0,-85 20,-90 L20,-75"/>
+    <!-- Knit texture -->
+    <path d="M-35,-15 Q-18,-5 0,-15 Q18,-25 35,-15" stroke-width="1.5" opacity="0.35"/>
+    <path d="M-35,5 Q-18,15 0,5 Q18,-5 35,5" stroke-width="1.5" opacity="0.35"/>
+    <path d="M-35,25 Q-18,35 0,25 Q18,15 35,25" stroke-width="1.5" opacity="0.35"/>
+    <path d="M-35,45 Q-18,55 0,45 Q18,35 35,45" stroke-width="1.5" opacity="0.35"/>
+    <!-- Ribbing at hem -->
+    <path d="M-42,60 L-42,68" stroke-dasharray="3,3"/>
+    <path d="M-25,60 L-25,68" stroke-dasharray="3,3"/>
+    <path d="M-8,60 L-8,68" stroke-dasharray="3,3"/>
+    <path d="M8,60 L8,68" stroke-dasharray="3,3"/>
+    <path d="M25,60 L25,68" stroke-dasharray="3,3"/>
+    <path d="M42,60 L42,68" stroke-dasharray="3,3"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+# 비밀 정보 — 절대 Git에 올리면 안 됨
+.env
+credentials.json
+token.json
+application-secret.properties
+application-prod.properties
+
+# 빌드 결과물
+target/
+
+# Eclipse 프로젝트 파일
+.classpath
+.project
+.settings/
+
+# IDE
+.idea/
+*.iml
+
+# 임시 작업 공간
+.tmp/
+
+# 로그
+*.log
+logs/

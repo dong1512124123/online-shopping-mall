@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f2f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Gym shorts -->
+    <path d="M-55,-50 Q-60,-50 -60,-45 L-60,-5 Q-62,20 -68,50 Q-68,55 -63,55 L-15,55 Q-10,55 -10,50 L-5,10 L5,50 Q5,55 10,55 L58,55 Q63,55 63,50 Q57,20 55,-5 L55,-45 Q55,-50 50,-50 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-50 Q-60,-50 -60,-45 L-60,-5 Q-62,20 -68,50 Q-68,55 -63,55 L-15,55 Q-10,55 -10,50 L-5,10 L5,50 Q5,55 10,55 L58,55 Q63,55 63,50 Q57,20 55,-5 L55,-45 Q55,-50 50,-50 Z"/>
+    <!-- Elastic waistband -->
+    <path d="M-60,-35 L55,-35"/>
+    <!-- Side slits -->
+    <path d="M-60,-5 L-68,50" stroke-width="2"/>
+    <path d="M55,-5 L63,50" stroke-width="2"/>
+    <!-- Inner drawstring -->
+    <path d="M-12,-42 Q-5,-30 2,-42"/>
+    <path d="M-12,-42 L-16,-30"/>
+    <path d="M2,-42 L6,-30"/>
+  </g>
+</svg>

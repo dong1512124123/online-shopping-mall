@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f5f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sneakers -->
+    <!-- Sole -->
+    <path d="M-75,25 Q-85,25 -85,18 L-80,12 Q-55,8 55,8 L75,2 Q90,2 90,12 L90,20 Q90,30 80,30 L-65,30 Q-75,30 -75,25 Z" fill="#333" opacity="0.2"/>
+    <path d="M-75,25 Q-85,25 -85,18 L-80,12 Q-55,8 55,8 L75,2 Q90,2 90,12 L90,20 Q90,30 80,30 L-65,30 Q-75,30 -75,25 Z"/>
+    <!-- Upper -->
+    <path d="M-70,12 Q-75,-5 -65,-20 Q-45,-42 -15,-45 Q15,-48 40,-35 Q58,-25 65,-12 L70,2" fill="#333" opacity="0.1"/>
+    <path d="M-70,12 Q-75,-5 -65,-20 Q-45,-42 -15,-45 Q15,-48 40,-35 Q58,-25 65,-12 L70,2"/>
+    <!-- Tongue -->
+    <path d="M25,-35 Q30,-52 42,-48 Q52,-40 48,-28"/>
+    <!-- Laces -->
+    <path d="M-10,-40 L8,-25" stroke-width="2"/>
+    <path d="M0,-42 L18,-28" stroke-width="2"/>
+    <path d="M10,-42 L28,-28" stroke-width="2"/>
+    <!-- Side swoosh/stripe -->
+    <path d="M-50,-10 Q-20,-30 30,-5" stroke-width="4" opacity="0.25"/>
+    <!-- Heel tab -->
+    <path d="M-65,-20 L-60,-10" stroke-width="4" opacity="0.3"/>
+    <!-- Toe cap -->
+    <path d="M65,-5 Q75,0 75,8" stroke-width="2"/>
+  </g>
+</svg>

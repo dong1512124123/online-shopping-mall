@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${isEdit ? '상품 수정' : '상품 등록'} + ' - FASHION STORE'">상품 등록</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container py-5">
+    <!-- 브레드크럼 -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="font-size: 12px;">
+            <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-dark">관리자</a></li>
+            <li class="breadcrumb-item"><a href="/admin/product" class="text-dark">상품관리</a></li>
+            <li class="breadcrumb-item active" th:text="${isEdit ? product.name + ' 수정' : '새 상품 등록'}">상품 등록</li>
+        </ol>
+    </nav>
+
+    <form th:action="${isEdit ? '/admin/product/' + product.id + '/edit' : '/admin/product/new'}"
+          method="post">
+
+        <div class="row g-4">
+            <!-- 왼쪽: 이미지 미리보기 -->
+            <div class="col-md-6">
+                <div id="imagePreview" class="product-img-placeholder"
+                     style="background-color: #f5f5f5; aspect-ratio: 3/4; border-radius: 8px;">
+                    <img th:if="${isEdit && product.imageUrl != null}" th:src="${product.imageUrl}"
+                         id="previewImg"
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <span th:if="${!isEdit || product.imageUrl == null}" id="noImageText"
+                          style="font-size: 16px; color: #bbb;">NO IMAGE</span>
+                </div>
+                <div class="mt-3">
+                    <label class="form-label" style="font-size: 13px;">이미지 URL</label>
+                    <input type="text" name="imageUrl" id="imageUrlInput"
+                           class="form-control form-control-sm"
+                           th:value="${product.imageUrl}" placeholder="https://..."
+                           oninput="updatePreview(this.value)">
+                </div>
+            </div>
+
+            <!-- 오른쪽: 상품 정보 입력 -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <h5 class="fw-bold mb-0" th:text="${isEdit ? '상품 수정' : '새 상품 등록'}">상품 등록</h5>
+                    <span th:if="${isEdit}" class="badge bg-dark" th:text="'#' + ${product.id}">ID</span>
+                </div>
+
+                <!-- 상품명 -->
+                <div class="mb-3">
+                    <label class="form-label" style="font-size: 13px;">상품명 *</label>
+                    <input type="text" name="name" class="form-control form-control-sm"
+                           th:value="${product.name}" required placeholder="상품명을 입력하세요">
+                </div>
+
+                <!-- 카테고리 -->
+                <div class="mb-3">
+                    <label class="form-label" style="font-size: 13px;">카테고리 *</label>
+                    <select name="category" class="form-select form-select-sm" required style="font-size: 13px;">
+                        <option value="">선택하세요</option>
+                        <option th:each="cat : ${categories}" th:value="${cat}"
+                                th:text="${cat.displayName}"
+                                th:selected="${product.category == cat}">카테고리</option>
+                    </select>
+                </div>
+
+                <!-- 가격 -->
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label class="form-label" style="font-size: 13px;">판매가 *</label>
+                        <div class="input-group input-group-sm">
+                            <input type="number" name="price" class="form-control form-control-sm"
+                                   th:value="${product.price}" min="0" required>
+                            <span class="input-group-text" style="font-size: 12px;">원</span>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label" style="font-size: 13px;">원가 (할인 표시용)</label>
+                        <div class="input-group input-group-sm">
+                            <input type="number" name="originalPrice" class="form-control form-control-sm"
+                                   th:value="${product.originalPrice}" min="0">
+                            <span class="input-group-text" style="font-size: 12px;">원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 재고 -->
+                <div class="mb-3">
+                    <label class="form-label" style="font-size: 13px;">재고 *</label>
+                    <input type="number" name="stock" class="form-control form-control-sm"
+                           th:value="${product.stock}" min="0" required>
+                </div>
+
+                <!-- 상품 설명 -->
+                <div class="mb-3">
+                    <label class="form-label" style="font-size: 13px;">상품 설명</label>
+                    <textarea name="description" class="form-control form-control-sm" rows="5"
+                              style="line-height: 1.8;"
+                              th:text="${product.description}" placeholder="상품에 대한 설명을 입력하세요"></textarea>
+                </div>
+
+                <hr>
+
+                <!-- 옵션 체크박스 -->
+                <div class="d-flex gap-4 mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sale" value="true"
+                               id="isSale" th:checked="${product.sale}">
+                        <label class="form-check-label" for="isSale" style="font-size: 13px;">
+                            <span class="badge bg-danger" style="font-size: 10px;">SALE</span> 세일 상품
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="new" value="true"
+                               id="isNew" th:checked="${product.new}">
+                        <label class="form-check-label" for="isNew" style="font-size: 13px;">
+                            <span class="badge bg-dark" style="font-size: 10px;">NEW</span> 신상품
+                        </label>
+                    </div>
+                    <div class="form-check" th:if="${isEdit}">
+                        <input class="form-check-input" type="checkbox" name="enabled" value="true"
+                               id="isEnabled" th:checked="${product.enabled}">
+                        <label class="form-check-label" for="isEnabled" style="font-size: 13px;">
+                            <span class="badge bg-success" style="font-size: 10px;">판매중</span> 노출
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 수정 시 통계 정보 표시 -->
+                <div th:if="${isEdit}" class="mb-4">
+                    <table class="table table-sm mb-0" style="font-size: 12px; color: #999;">
+                        <tr>
+                            <td style="width: 80px;">조회수</td>
+                            <td th:text="${product.viewCount}">0</td>
+                            <td style="width: 80px;">좋아요</td>
+                            <td th:text="${product.wishCount}">0</td>
+                        </tr>
+                        <tr>
+                            <td>등록일</td>
+                            <td colspan="3" th:text="${#temporals.format(product.createdAt, 'yyyy-MM-dd HH:mm')}">2024-01-01</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-dark btn-sm px-4"
+                            th:text="${isEdit ? '수정하기' : '등록하기'}">등록하기</button>
+                    <a th:if="${isEdit}" th:href="@{/admin/product/{id}(id=${product.id})}"
+                       class="btn btn-outline-dark btn-sm px-4">상세보기</a>
+                    <a href="/admin/product" class="btn btn-outline-secondary btn-sm px-4">목록으로</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function updatePreview(url) {
+        const preview = document.getElementById('imagePreview');
+        const noText = document.getElementById('noImageText');
+        let img = document.getElementById('previewImg');
+
+        if (url && url.trim() !== '') {
+            if (!img) {
+                img = document.createElement('img');
+                img.id = 'previewImg';
+                img.style.cssText = 'width: 100%; height: 100%; object-fit: cover; border-radius: 8px;';
+                preview.appendChild(img);
+            }
+            img.src = url;
+            if (noText) noText.style.display = 'none';
+        } else {
+            if (img) img.remove();
+            if (noText) noText.style.display = '';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f3f1ef"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Pants/Jeans -->
+    <path d="M-55,-100 L-60,-100 Q-65,-100 -65,-95 L-65,0 Q-65,5 -68,20 L-75,95 Q-75,100 -70,100 L-30,100 Q-25,100 -25,95 L-10,0 L5,95 Q5,100 10,100 L50,100 Q55,100 55,95 L48,20 Q45,5 45,0 L45,-95 Q45,-100 40,-100 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-100 L-60,-100 Q-65,-100 -65,-95 L-65,0 Q-65,5 -68,20 L-75,95 Q-75,100 -70,100 L-30,100 Q-25,100 -25,95 L-10,0 L5,95 Q5,100 10,100 L50,100 Q55,100 55,95 L48,20 Q45,5 45,0 L45,-95 Q45,-100 40,-100 Z"/>
+    <!-- Waistband -->
+    <path d="M-65,-85 L45,-85"/>
+    <!-- Fly -->
+    <path d="M-10,-85 L-10,-30"/>
+    <!-- Pockets -->
+    <path d="M-55,-85 L-55,-60 L-40,-55"/>
+    <path d="M35,-85 L35,-60 L20,-55"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f5f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tank top -->
+    <path d="M-35,-80 L-40,-75 Q-45,-60 -45,-40 L-45,80 Q-45,88 -37,88 L37,88 Q45,88 45,80 L45,-40 Q45,-60 40,-75 L35,-80 Q15,-62 0,-66 Q-15,-62 -35,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-35,-80 L-40,-75 Q-45,-60 -45,-40 L-45,80 Q-45,88 -37,88 L37,88 Q45,88 45,80 L45,-40 Q45,-60 40,-75 L35,-80 Q15,-62 0,-66 Q-15,-62 -35,-80 Z"/>
+    <!-- Scoop neck -->
+    <path d="M-35,-80 Q0,-55 35,-80"/>
+    <!-- Arm holes -->
+    <path d="M-40,-75 Q-55,-55 -45,-40"/>
+    <path d="M40,-75 Q55,-55 45,-40"/>
+    <!-- Racerback straps -->
+    <path d="M-35,-80 L-20,-95"/>
+    <path d="M35,-80 L20,-95"/>
+    <path d="M-20,-95 Q0,-88 20,-95"/>
+  </g>
+</svg>

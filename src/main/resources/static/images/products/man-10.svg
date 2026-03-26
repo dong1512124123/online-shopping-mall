@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#edeff2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Overcoat -->
+    <path d="M-65,-95 L-100,-35 L-80,-15 L-65,-30 L-68,100 Q-68,110 -58,110 L58,110 Q68,110 68,100 L65,-30 L80,-15 L100,-35 L65,-95 L30,-95 L15,-65 L0,-75 L-15,-65 L-30,-95 Z" fill="#333" opacity="0.15"/>
+    <path d="M-65,-95 L-100,-35 L-80,-15 L-65,-30 L-68,100 Q-68,110 -58,110 L58,110 Q68,110 68,100 L65,-30 L80,-15 L100,-35 L65,-95 L30,-95 L15,-65 L0,-75 L-15,-65 L-30,-95 Z"/>
+    <!-- Lapels -->
+    <path d="M-30,-95 L-15,-65 L-25,-35"/>
+    <path d="M30,-95 L15,-65 L25,-35"/>
+    <!-- Center line -->
+    <path d="M0,-75 L0,110"/>
+    <!-- Buttons -->
+    <circle cx="-12" cy="-20" r="3" fill="#333"/>
+    <circle cx="-12" cy="15" r="3" fill="#333"/>
+    <circle cx="-12" cy="50" r="3" fill="#333"/>
+    <!-- Pockets -->
+    <path d="M-55,30 L-55,55 L-25,55"/>
+    <path d="M55,30 L55,55 L25,55"/>
+    <!-- Belt -->
+    <path d="M-68,65 L68,65"/>
+  </g>
+</svg>

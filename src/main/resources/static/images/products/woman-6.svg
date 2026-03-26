@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f2f2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Denim jacket -->
+    <path d="M-55,-80 L-80,-30 L-65,-12 L-52,-25 L-52,65 Q-52,72 -45,72 L45,72 Q52,72 52,65 L52,-25 L65,-12 L80,-30 L55,-80 L28,-80 L15,-58 L0,-65 L-15,-58 L-28,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-80 L-80,-30 L-65,-12 L-52,-25 L-52,65 Q-52,72 -45,72 L45,72 Q52,72 52,65 L52,-25 L65,-12 L80,-30 L55,-80 L28,-80 L15,-58 L0,-65 L-15,-58 L-28,-80 Z"/>
+    <!-- Collar -->
+    <path d="M-28,-80 L-15,-58 L-22,-40"/>
+    <path d="M28,-80 L15,-58 L22,-40"/>
+    <!-- Center line -->
+    <path d="M0,-65 L0,72"/>
+    <!-- Buttons -->
+    <circle cx="-8" cy="-30" r="2.5" fill="#333"/>
+    <circle cx="-8" cy="0" r="2.5" fill="#333"/>
+    <circle cx="-8" cy="30" r="2.5" fill="#333"/>
+    <circle cx="-8" cy="55" r="2.5" fill="#333"/>
+    <!-- Chest pockets -->
+    <path d="M-42,-25 L-42,-5 L-18,-5 L-18,-25"/>
+    <path d="M-42,-15 L-18,-15"/>
+    <path d="M18,-25 L18,-5 L42,-5 L42,-25"/>
+    <path d="M18,-15 L42,-15"/>
+    <!-- Stitching -->
+    <path d="M-52,50 L52,50" stroke-dasharray="4,3" stroke-width="1.5" opacity="0.4"/>
+  </g>
+</svg>

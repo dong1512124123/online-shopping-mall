@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f0f2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Dress -->
+    <path d="M-30,-100 L-45,-70 L-35,-60 L-30,-65 L-30,-30 Q-30,-20 -50,20 L-65,100 Q-65,110 -55,110 L55,110 Q65,110 65,100 L50,20 Q30,-20 30,-30 L30,-65 L35,-60 L45,-70 L30,-100 Q15,-80 0,-85 Q-15,-80 -30,-100 Z" fill="#333" opacity="0.15"/>
+    <path d="M-30,-100 L-45,-70 L-35,-60 L-30,-65 L-30,-30 Q-30,-20 -50,20 L-65,100 Q-65,110 -55,110 L55,110 Q65,110 65,100 L50,20 Q30,-20 30,-30 L30,-65 L35,-60 L45,-70 L30,-100 Q15,-80 0,-85 Q-15,-80 -30,-100 Z"/>
+    <!-- Neckline -->
+    <path d="M-30,-100 Q0,-75 30,-100"/>
+    <!-- Waist -->
+    <path d="M-30,-30 Q0,-22 30,-30"/>
+    <!-- Skirt flow lines -->
+    <path d="M-20,0 Q-30,50 -45,90" stroke-width="1.5" opacity="0.3"/>
+    <path d="M20,0 Q30,50 45,90" stroke-width="1.5" opacity="0.3"/>
+    <path d="M0,-10 Q0,40 0,100" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>

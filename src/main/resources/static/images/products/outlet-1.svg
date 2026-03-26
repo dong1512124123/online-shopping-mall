@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f0f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Coat -->
+    <path d="M-60,-90 L-90,-32 L-72,-14 L-58,-28 L-62,95 Q-62,105 -52,105 L52,105 Q62,105 62,95 L58,-28 L72,-14 L90,-32 L60,-90 L28,-90 L15,-62 L0,-72 L-15,-62 L-28,-90 Z" fill="#333" opacity="0.15"/>
+    <path d="M-60,-90 L-90,-32 L-72,-14 L-58,-28 L-62,95 Q-62,105 -52,105 L52,105 Q62,105 62,95 L58,-28 L72,-14 L90,-32 L60,-90 L28,-90 L15,-62 L0,-72 L-15,-62 L-28,-90 Z"/>
+    <!-- Lapels -->
+    <path d="M-28,-90 L-15,-62 L-22,-35"/>
+    <path d="M28,-90 L15,-62 L22,-35"/>
+    <!-- Center -->
+    <path d="M0,-72 L0,105"/>
+    <!-- Buttons -->
+    <circle cx="-10" cy="-15" r="3" fill="#333"/>
+    <circle cx="-10" cy="20" r="3" fill="#333"/>
+    <circle cx="-10" cy="55" r="3" fill="#333"/>
+    <!-- SALE tag -->
+    <g transform="translate(45,-75) rotate(15)">
+      <rect x="-18" y="-10" width="36" height="20" rx="3" fill="#333" opacity="0.8"/>
+      <circle cx="-12" cy="0" r="2.5" fill="#f5f0f0"/>
+    </g>
+  </g>
+</svg>

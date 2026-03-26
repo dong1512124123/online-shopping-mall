@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f2f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Trench coat -->
+    <path d="M-60,-90 L-95,-30 L-75,-10 L-60,-25 L-65,105 Q-65,115 -55,115 L55,115 Q65,115 65,105 L60,-25 L75,-10 L95,-30 L60,-90 L28,-90 L15,-62 L0,-72 L-15,-62 L-28,-90 Z" fill="#333" opacity="0.15"/>
+    <path d="M-60,-90 L-95,-30 L-75,-10 L-60,-25 L-65,105 Q-65,115 -55,115 L55,115 Q65,115 65,105 L60,-25 L75,-10 L95,-30 L60,-90 L28,-90 L15,-62 L0,-72 L-15,-62 L-28,-90 Z"/>
+    <!-- Wide lapels -->
+    <path d="M-28,-90 L-15,-62 L-30,-30"/>
+    <path d="M28,-90 L15,-62 L30,-30"/>
+    <!-- Double-breasted buttons -->
+    <circle cx="-18" cy="-10" r="3" fill="#333"/>
+    <circle cx="18" cy="-10" r="3" fill="#333"/>
+    <circle cx="-18" cy="25" r="3" fill="#333"/>
+    <circle cx="18" cy="25" r="3" fill="#333"/>
+    <!-- Belt -->
+    <path d="M-65,50 L65,50"/>
+    <rect x="-8" y="44" width="16" height="12" rx="2" fill="#333" opacity="0.3"/>
+    <!-- Pocket flaps -->
+    <path d="M-52,60 L-25,60"/>
+    <path d="M25,60 L52,60"/>
+    <!-- Center overlap -->
+    <path d="M0,-72 L0,115"/>
+  </g>
+</svg>

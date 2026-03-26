@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f2f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Jogger pants -->
+    <path d="M-50,-100 Q-55,-100 -55,-95 L-60,-10 Q-62,30 -65,60 L-65,80 Q-55,85 -45,80 L-40,60 Q-30,10 -10,0 Q10,10 20,60 L25,80 Q35,85 45,80 L45,60 Q42,30 40,-10 L35,-95 Q35,-100 30,-100 Z" fill="#333" opacity="0.15"/>
+    <path d="M-50,-100 Q-55,-100 -55,-95 L-60,-10 Q-62,30 -65,60 L-65,80 Q-55,85 -45,80 L-40,60 Q-30,10 -10,0 Q10,10 20,60 L25,80 Q35,85 45,80 L45,60 Q42,30 40,-10 L35,-95 Q35,-100 30,-100 Z"/>
+    <!-- Waistband with drawstring -->
+    <path d="M-55,-85 L35,-85"/>
+    <path d="M-15,-92 Q-10,-80 -5,-92"/>
+    <path d="M-15,-92 L-20,-78"/>
+    <path d="M-5,-92 L0,-78"/>
+    <!-- Elastic cuffs -->
+    <path d="M-65,75 Q-55,82 -45,75"/>
+    <path d="M25,75 Q35,82 45,75"/>
+  </g>
+</svg>

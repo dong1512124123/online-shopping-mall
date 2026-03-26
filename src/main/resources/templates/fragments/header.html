@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<!-- 상단바 fragment -->
+<nav th:fragment="header" class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+        <!-- 로고 -->
+        <a class="navbar-brand fw-bold fs-5 me-4" href="/" style="letter-spacing: 1px;">FASHION STORE</a>
+
+        <!-- 모바일 토글 -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <!-- 카테고리 메뉴 (좌측) -->
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-category" href="/category/MAN">MAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-category" href="/category/WOMAN">WOMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-category" href="/category/SPORTS">SPORTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-category" href="/category/OUTLET">OUTLET</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-category" href="/category/KIDS">KIDS</a>
+                </li>
+            </ul>
+
+            <!-- 검색 -->
+            <form class="d-flex me-3 nav-search-form" action="/search" method="get" style="max-width: 200px;">
+                <div class="input-group input-group-sm">
+                    <input type="text" name="keyword" class="form-control" placeholder="검색"
+                           style="font-size: 12px; border-color: #ddd;">
+                    <button class="btn btn-outline-dark" type="submit" style="font-size: 12px;">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- 우측 아이콘 영역 -->
+            <ul class="navbar-nav align-items-center">
+                <!-- 좋아요 (관리자 제외) -->
+                <li class="nav-item" sec:authorize="!hasRole('ADMIN')">
+                    <a class="nav-link nav-icon-link" href="/wishlist">
+                        <i class="bi bi-heart"></i>
+                        <span class="nav-icon-text">좋아요</span>
+                    </a>
+                </li>
+                <!-- 장바구니 (관리자 제외) -->
+                <li class="nav-item" sec:authorize="!hasRole('ADMIN')">
+                    <a class="nav-link nav-icon-link position-relative" href="/cart">
+                        <i class="bi bi-bag"></i>
+                        <span class="nav-icon-text">장바구니</span>
+                    </a>
+                </li>
+                <!-- 주문내역 (로그인 후) -->
+                <li class="nav-item" sec:authorize="hasRole('USER')">
+                    <a class="nav-link nav-icon-link" href="/order/list">
+                        <i class="bi bi-receipt"></i>
+                        <span class="nav-icon-text">주문</span>
+                    </a>
+                </li>
+                <!-- 마이 (로그인 후) -->
+                <li class="nav-item" sec:authorize="hasRole('USER')">
+                    <a class="nav-link nav-icon-link" href="/mypage">
+                        <i class="bi bi-person"></i>
+                        <span class="nav-icon-text">마이</span>
+                    </a>
+                </li>
+                <!-- 관리자 -->
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link nav-icon-link" href="/admin/dashboard">
+                        <i class="bi bi-gear"></i>
+                        <span class="nav-icon-text">관리</span>
+                    </a>
+                </li>
+                <!-- 로그인 전 -->
+                <li class="nav-item" sec:authorize="!isAuthenticated()">
+                    <a class="nav-link nav-icon-link" href="/auth/login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        <span class="nav-icon-text">로그인</span>
+                    </a>
+                </li>
+                <!-- 로그인 후: 닉네임 표시 + 로그아웃 -->
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <form th:action="@{/auth/logout}" method="post" class="d-inline">
+                        <button type="submit" class="nav-link nav-icon-link btn btn-link p-0 border-0"
+                                style="text-decoration: none; font-size: inherit; color: inherit;"
+                                th:text="${currentNickname != null ? currentNickname + '님 로그아웃' : '로그아웃'}">
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f3f2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Jumpsuit -->
+    <path d="M-35,-90 L-55,-55 L-42,-42 L-35,-50 L-35,-10 Q-40,10 -55,50 L-55,100 Q-55,108 -47,108 L-10,108 Q-2,108 -2,100 L-2,30 L2,30 L2,100 Q2,108 10,108 L47,108 Q55,108 55,100 L55,50 Q40,10 35,-10 L35,-50 L42,-42 L55,-55 L35,-90 L15,-90 Q5,-72 0,-76 Q-5,-72 -15,-90 Z" fill="#333" opacity="0.15"/>
+    <path d="M-35,-90 L-55,-55 L-42,-42 L-35,-50 L-35,-10 Q-40,10 -55,50 L-55,100 Q-55,108 -47,108 L-10,108 Q-2,108 -2,100 L-2,30 L2,30 L2,100 Q2,108 10,108 L47,108 Q55,108 55,100 L55,50 Q40,10 35,-10 L35,-50 L42,-42 L55,-55 L35,-90 L15,-90 Q5,-72 0,-76 Q-5,-72 -15,-90 Z"/>
+    <!-- Neckline -->
+    <path d="M-15,-90 Q0,-68 15,-90"/>
+    <!-- Belt/waist -->
+    <path d="M-35,-10 Q0,0 35,-10"/>
+    <!-- Belt buckle -->
+    <rect x="-6" y="-14" width="12" height="8" rx="2" fill="#333" opacity="0.3"/>
+  </g>
+</svg>

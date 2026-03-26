@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f2f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Button-down shirt -->
+    <path d="M-60,-90 L-85,-50 L-65,-30 L-55,-40 L-55,90 Q-55,95 -50,95 L50,95 Q55,95 55,90 L55,-40 L65,-30 L85,-50 L60,-90 L25,-90 L15,-60 L0,-70 L-15,-60 L-25,-90 Z" fill="#333" opacity="0.15"/>
+    <path d="M-60,-90 L-85,-50 L-65,-30 L-55,-40 L-55,90 Q-55,95 -50,95 L50,95 Q55,95 55,90 L55,-40 L65,-30 L85,-50 L60,-90 L25,-90 L15,-60 L0,-70 L-15,-60 L-25,-90 Z"/>
+    <!-- Collar -->
+    <path d="M-25,-90 L-15,-60 L0,-70 L15,-60 L25,-90"/>
+    <!-- Button line -->
+    <path d="M0,-70 L0,95"/>
+    <!-- Buttons -->
+    <circle cx="0" cy="-40" r="3" fill="#333"/>
+    <circle cx="0" cy="-10" r="3" fill="#333"/>
+    <circle cx="0" cy="20" r="3" fill="#333"/>
+    <circle cx="0" cy="50" r="3" fill="#333"/>
+    <circle cx="0" cy="80" r="3" fill="#333"/>
+  </g>
+</svg>

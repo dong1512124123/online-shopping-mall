@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매출 현황 - FASHION STORE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container py-5">
+
+    <!-- 페이지 헤더 -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5 class="fw-bold mb-0">매출 현황</h5>
+        <a href="/admin/dashboard" class="btn btn-outline-dark btn-sm" style="font-size: 12px;">
+            <i class="bi bi-arrow-left me-1"></i>대시보드
+        </a>
+    </div>
+
+    <!-- 연도 선택 + 총 매출 -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-muted" style="font-size: 13px;">연도</span>
+                    <select class="form-select form-select-sm" style="width: auto; font-size: 13px;"
+                            onchange="location.href='/admin/revenue?year=' + this.value">
+                        <option th:each="y : ${years}" th:value="${y}" th:text="${y + '년'}"
+                                th:selected="${y == selectedYear}"></option>
+                    </select>
+                </div>
+                <div class="text-end">
+                    <p class="text-muted mb-0" style="font-size: 12px;"
+                       th:text="${selectedYear + '년 총 매출'}">2026년 총 매출</p>
+                    <h4 class="fw-bold mb-0" th:text="${#numbers.formatInteger(totalRevenue, 0, 'COMMA')} + '원'">0원</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 월별 매출 그래프 -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="fw-bold mb-3" style="font-size: 14px;"
+                th:text="${selectedYear + '년 월별 매출'}">2026년 월별 매출</h6>
+            <canvas id="revenueChart" height="100"></canvas>
+        </div>
+    </div>
+
+    <!-- 월별 매출 상세 표 -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <h6 class="fw-bold px-3 pt-3 mb-3" style="font-size: 14px;">월별 상세</h6>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" style="font-size: 13px;">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width: 100px;">월</th>
+                            <th class="text-end" style="width: 150px;">매출액</th>
+                            <th>비율</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="entry : ${monthlyRevenue}">
+                            <td class="fw-bold" th:text="${entry.key}">1월</td>
+                            <td class="text-end" th:text="${#numbers.formatInteger(entry.value, 0, 'COMMA')} + '원'">0원</td>
+                            <td>
+                                <div class="progress" style="height: 18px; background: #f0f0f0;">
+                                    <div class="progress-bar"
+                                         role="progressbar"
+                                         th:style="'width:' + (${totalRevenue > 0 ? (entry.value * 100 / totalRevenue) : 0}) + '%; background-color: #333;'"
+                                         th:text="${totalRevenue > 0 ? #numbers.formatDecimal(entry.value * 100.0 / totalRevenue, 1, 1) + '%' : '0%'}">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="table-light fw-bold">
+                            <td>합계</td>
+                            <td class="text-end" th:text="${#numbers.formatInteger(totalRevenue, 0, 'COMMA')} + '원'">0원</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script th:inline="javascript">
+    const monthlyRevenue = /*[[${monthlyRevenue}]]*/ {};
+    const labels = Object.keys(monthlyRevenue);
+    const values = Object.values(monthlyRevenue);
+
+    new Chart(document.getElementById('revenueChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '매출 (원)',
+                data: values,
+                backgroundColor: values.map(function(v) {
+                    return v > 0 ? 'rgba(17, 17, 17, 0.7)' : 'rgba(17, 17, 17, 0.1)';
+                }),
+                borderColor: values.map(function(v) {
+                    return v > 0 ? '#111' : 'rgba(17, 17, 17, 0.2)';
+                }),
+                borderWidth: 1,
+                borderRadius: 4,
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            if (value >= 10000) {
+                                return (value / 10000).toLocaleString() + '만';
+                            }
+                            return value.toLocaleString() + '원';
+                        },
+                        font: { size: 11 }
+                    },
+                    grid: { color: 'rgba(0,0,0,0.04)' }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { font: { size: 12 } }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#111',
+                    titleFont: { size: 13 },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 4,
+                    callbacks: {
+                        label: function(ctx) {
+                            return ctx.parsed.y.toLocaleString() + '원';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

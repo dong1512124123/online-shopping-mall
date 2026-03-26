@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f3f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Polo shirt -->
+    <path d="M-60,-80 L-80,-40 L-65,-25 L-50,-35 L-50,85 Q-50,95 -40,95 L40,95 Q50,95 50,85 L50,-35 L65,-25 L80,-40 L60,-80 L25,-80 Q15,-55 0,-60 Q-15,-55 -25,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-60,-80 L-80,-40 L-65,-25 L-50,-35 L-50,85 Q-50,95 -40,95 L40,95 Q50,95 50,85 L50,-35 L65,-25 L80,-40 L60,-80 L25,-80 Q15,-55 0,-60 Q-15,-55 -25,-80 Z"/>
+    <!-- Polo collar -->
+    <path d="M-25,-80 L-18,-65 Q-10,-55 0,-60 Q10,-55 18,-65 L25,-80"/>
+    <path d="M-20,-78 Q-15,-70 -8,-72"/>
+    <path d="M20,-78 Q15,-70 8,-72"/>
+    <!-- Button placket -->
+    <path d="M0,-60 L0,-20"/>
+    <circle cx="0" cy="-48" r="2.5" fill="#333"/>
+    <circle cx="0" cy="-34" r="2.5" fill="#333"/>
+  </g>
+</svg>

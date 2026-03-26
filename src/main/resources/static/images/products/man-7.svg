@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f0f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Jacket -->
+    <path d="M-65,-85 L-95,-30 L-75,-10 L-60,-25 L-60,90 Q-60,95 -55,95 L55,95 Q60,95 60,90 L60,-25 L75,-10 L95,-30 L65,-85 L30,-85 L18,-60 L0,-70 L-18,-60 L-30,-85 Z" fill="#333" opacity="0.15"/>
+    <path d="M-65,-85 L-95,-30 L-75,-10 L-60,-25 L-60,90 Q-60,95 -55,95 L55,95 Q60,95 60,90 L60,-25 L75,-10 L95,-30 L65,-85 L30,-85 L18,-60 L0,-70 L-18,-60 L-30,-85 Z"/>
+    <!-- Collar/Lapels -->
+    <path d="M-30,-85 L-18,-60 L-25,-40"/>
+    <path d="M30,-85 L18,-60 L25,-40"/>
+    <!-- Center zipper -->
+    <path d="M0,-70 L0,95"/>
+    <!-- Pockets -->
+    <path d="M-50,25 L-50,50 L-25,50 L-25,25"/>
+    <path d="M25,25 L25,50 L50,50 L50,25"/>
+    <!-- Chest pocket -->
+    <path d="M-45,-25 L-45,-10 L-25,-10"/>
+  </g>
+</svg>

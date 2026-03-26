@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f5f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Leggings -->
+    <path d="M-40,-100 Q-45,-100 -45,-95 L-48,-20 Q-50,20 -52,60 L-52,100 Q-52,105 -47,105 L-18,105 Q-13,105 -13,100 L-8,10 L3,100 Q3,105 8,105 L37,105 Q42,105 42,100 L42,60 Q40,20 38,-20 L35,-95 Q35,-100 30,-100 Z" fill="#333" opacity="0.15"/>
+    <path d="M-40,-100 Q-45,-100 -45,-95 L-48,-20 Q-50,20 -52,60 L-52,100 Q-52,105 -47,105 L-18,105 Q-13,105 -13,100 L-8,10 L3,100 Q3,105 8,105 L37,105 Q42,105 42,100 L42,60 Q40,20 38,-20 L35,-95 Q35,-100 30,-100 Z"/>
+    <!-- High waistband -->
+    <path d="M-45,-85 L35,-85"/>
+    <!-- Side stripe -->
+    <path d="M-45,-85 L-48,-20 Q-50,20 -52,60 L-52,100" stroke-width="5" opacity="0.15"/>
+    <path d="M35,-85 L38,-20 Q40,20 42,60 L42,100" stroke-width="5" opacity="0.15"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f0f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Wide pants -->
+    <path d="M-55,-90 Q-60,-90 -60,-85 L-60,-10 Q-62,30 -75,90 Q-75,95 -70,95 L-15,95 Q-10,95 -10,90 L-5,10 L10,90 Q10,95 15,95 L70,95 Q75,95 75,90 Q62,30 60,-10 L60,-85 Q60,-90 55,-90 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-90 Q-60,-90 -60,-85 L-60,-10 Q-62,30 -75,90 Q-75,95 -70,95 L-15,95 Q-10,95 -10,90 L-5,10 L10,90 Q10,95 15,95 L70,95 Q75,95 75,90 Q62,30 60,-10 L60,-85 Q60,-90 55,-90 Z"/>
+    <!-- Waistband -->
+    <path d="M-60,-78 L60,-78"/>
+    <!-- Wide leg flow -->
+    <path d="M-40,-10 Q-50,40 -60,90" stroke-width="1.5" opacity="0.3"/>
+    <path d="M40,-10 Q50,40 60,90" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>

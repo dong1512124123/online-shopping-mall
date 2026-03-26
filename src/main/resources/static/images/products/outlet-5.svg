@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f3f0f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tote bag -->
+    <path d="M-60,-20 L-55,85 Q-55,95 -45,95 L45,95 Q55,95 55,85 L60,-20 Z" fill="#333" opacity="0.12"/>
+    <path d="M-60,-20 L-55,85 Q-55,95 -45,95 L45,95 Q55,95 55,85 L60,-20 Z"/>
+    <!-- Handles -->
+    <path d="M-30,-20 L-30,-55 Q-30,-70 -15,-70 Q0,-70 0,-55"/>
+    <path d="M30,-20 L30,-55 Q30,-70 15,-70 Q0,-70 0,-55"/>
+    <!-- Top opening -->
+    <path d="M-60,-20 L60,-20"/>
+    <!-- Stitching detail -->
+    <path d="M-52,-12 L-48,85" stroke-dasharray="4,4" stroke-width="1.5" opacity="0.3"/>
+    <path d="M52,-12 L48,85" stroke-dasharray="4,4" stroke-width="1.5" opacity="0.3"/>
+    <!-- Bottom gusset -->
+    <path d="M-50,75 L50,75" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>

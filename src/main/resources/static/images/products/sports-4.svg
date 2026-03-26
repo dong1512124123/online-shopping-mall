@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f2f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sports bra -->
+    <path d="M-45,-40 L-50,-35 Q-55,-10 -50,10 L-45,15 Q-25,25 0,18 Q25,25 45,15 L50,10 Q55,-10 50,-35 L45,-40 L20,-40 Q10,-28 0,-30 Q-10,-28 -20,-40 Z" fill="#333" opacity="0.15"/>
+    <path d="M-45,-40 L-50,-35 Q-55,-10 -50,10 L-45,15 Q-25,25 0,18 Q25,25 45,15 L50,10 Q55,-10 50,-35 L45,-40 L20,-40 Q10,-28 0,-30 Q-10,-28 -20,-40 Z"/>
+    <!-- Straps -->
+    <path d="M-20,-40 L-25,-70"/>
+    <path d="M20,-40 L25,-70"/>
+    <!-- Center seam -->
+    <path d="M0,-30 L0,18"/>
+    <!-- Under-bust band -->
+    <path d="M-50,10 Q0,20 50,10" stroke-width="2"/>
+    <!-- Racerback detail -->
+    <path d="M-25,-70 Q0,-60 25,-70" stroke-dasharray="4,3"/>
+  </g>
+</svg>

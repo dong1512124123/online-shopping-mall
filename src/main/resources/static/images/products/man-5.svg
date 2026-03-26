@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#eef0f2"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hoodie -->
+    <path d="M-60,-80 L-90,-30 L-70,-10 L-55,-25 L-55,85 Q-55,95 -45,95 L45,95 Q55,95 55,85 L55,-25 L70,-10 L90,-30 L60,-80 L30,-80 Q15,-55 0,-60 Q-15,-55 -30,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-60,-80 L-90,-30 L-70,-10 L-55,-25 L-55,85 Q-55,95 -45,95 L45,95 Q55,95 55,85 L55,-25 L70,-10 L90,-30 L60,-80 L30,-80 Q15,-55 0,-60 Q-15,-55 -30,-80 Z"/>
+    <!-- Hood -->
+    <path d="M-30,-80 Q-40,-110 -20,-120 Q0,-130 20,-120 Q40,-110 30,-80"/>
+    <!-- Front pocket -->
+    <path d="M-35,30 L-35,55 Q-35,60 -30,60 L30,60 Q35,60 35,55 L35,30"/>
+    <!-- Drawstrings -->
+    <path d="M-10,-60 L-10,-45"/>
+    <path d="M10,-60 L10,-45"/>
+    <!-- Center line -->
+    <path d="M0,-60 L0,95"/>
+  </g>
+</svg>

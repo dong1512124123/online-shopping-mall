@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f5f3"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Overalls/Suspender shorts -->
+    <!-- Shorts body -->
+    <path d="M-48,-20 Q-52,-20 -52,-16 L-55,20 Q-58,45 -60,60 Q-60,65 -55,65 L-12,65 Q-8,65 -8,60 L-3,30 L7,60 Q7,65 12,65 L55,65 Q60,65 60,60 Q58,45 55,20 L52,-16 Q52,-20 48,-20 Z" fill="#333" opacity="0.15"/>
+    <path d="M-48,-20 Q-52,-20 -52,-16 L-55,20 Q-58,45 -60,60 Q-60,65 -55,65 L-12,65 Q-8,65 -8,60 L-3,30 L7,60 Q7,65 12,65 L55,65 Q60,65 60,60 Q58,45 55,20 L52,-16 Q52,-20 48,-20 Z"/>
+    <!-- Bib -->
+    <path d="M-30,-20 L-30,-55 Q-30,-60 -25,-60 L25,-60 Q30,-60 30,-55 L30,-20"/>
+    <!-- Suspender straps -->
+    <path d="M-25,-60 L-40,-80"/>
+    <path d="M25,-60 L40,-80"/>
+    <!-- Bib pocket -->
+    <path d="M-15,-50 L-15,-35 Q-15,-30 -10,-30 L10,-30 Q15,-30 15,-35 L15,-50"/>
+    <!-- Buttons at strap connection -->
+    <circle cx="-40" cy="-20" r="4" fill="#333" opacity="0.3"/>
+    <circle cx="40" cy="-20" r="4" fill="#333" opacity="0.3"/>
+  </g>
+</svg>

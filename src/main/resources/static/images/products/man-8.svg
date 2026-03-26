@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f2f0ed"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sweater/Knit -->
+    <path d="M-55,-80 L-85,-30 L-65,-10 L-50,-25 L-50,85 Q-50,95 -40,95 L40,95 Q50,95 50,85 L50,-25 L65,-10 L85,-30 L55,-80 L25,-80 Q10,-60 0,-65 Q-10,-60 -25,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-80 L-85,-30 L-65,-10 L-50,-25 L-50,85 Q-50,95 -40,95 L40,95 Q50,95 50,85 L50,-25 L65,-10 L85,-30 L55,-80 L25,-80 Q10,-60 0,-65 Q-10,-60 -25,-80 Z"/>
+    <!-- Crew neck -->
+    <path d="M-25,-80 Q0,-60 25,-80"/>
+    <!-- Ribbing at bottom -->
+    <path d="M-50,85 L-50,95" stroke-dasharray="4,4"/>
+    <path d="M-35,85 L-35,95" stroke-dasharray="4,4"/>
+    <path d="M-20,85 L-20,95" stroke-dasharray="4,4"/>
+    <path d="M-5,85 L-5,95" stroke-dasharray="4,4"/>
+    <path d="M10,85 L10,95" stroke-dasharray="4,4"/>
+    <path d="M25,85 L25,95" stroke-dasharray="4,4"/>
+    <path d="M40,85 L40,95" stroke-dasharray="4,4"/>
+    <!-- Knit texture lines -->
+    <path d="M-40,0 Q-20,10 0,0 Q20,-10 40,0" stroke-width="1.5" opacity="0.4"/>
+    <path d="M-40,20 Q-20,30 0,20 Q20,10 40,20" stroke-width="1.5" opacity="0.4"/>
+    <path d="M-40,40 Q-20,50 0,40 Q20,30 40,40" stroke-width="1.5" opacity="0.4"/>
+  </g>
+</svg>

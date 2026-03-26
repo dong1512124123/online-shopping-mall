@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f3f3"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Scarf/Muffler -->
+    <path d="M-60,-80 Q-80,-70 -85,-40 Q-90,0 -70,30 Q-50,55 -20,60 Q10,65 40,50 Q65,35 75,10 Q85,-20 70,-50 Q60,-70 40,-75 Q20,-80 0,-70 Q-15,-62 -20,-45 Q-25,-25 -10,-10 Q5,5 25,0 Q40,-5 45,-20" fill="none" stroke="#333" stroke-width="8" opacity="0.15"/>
+    <path d="M-60,-80 Q-80,-70 -85,-40 Q-90,0 -70,30 Q-50,55 -20,60 Q10,65 40,50 Q65,35 75,10 Q85,-20 70,-50 Q60,-70 40,-75 Q20,-80 0,-70 Q-15,-62 -20,-45 Q-25,-25 -10,-10 Q5,5 25,0 Q40,-5 45,-20"/>
+    <!-- Fringe at one end -->
+    <path d="M-60,-80 L-65,-95"/>
+    <path d="M-55,-82 L-58,-97"/>
+    <path d="M-65,-78 L-72,-92"/>
+    <!-- Fringe at other end -->
+    <path d="M45,-20 L55,-28"/>
+    <path d="M48,-18 L58,-22"/>
+    <path d="M43,-24 L50,-35"/>
+    <!-- Texture lines -->
+    <path d="M-70,-55 Q-55,-45 -40,-55" stroke-width="1.5" opacity="0.3"/>
+    <path d="M-75,-15 Q-60,-5 -45,-15" stroke-width="1.5" opacity="0.3"/>
+    <path d="M-55,25 Q-40,35 -25,25" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>

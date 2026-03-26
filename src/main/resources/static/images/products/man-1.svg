@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f5f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- T-shirt -->
+    <path d="M-70,-80 L-70,-60 Q-70,10 -50,20 L-50,80 Q-50,90 -40,90 L40,90 Q50,90 50,80 L50,20 Q70,10 70,-60 L70,-80 L30,-80 Q20,-50 -20,-50 Q-20,-50 -30,-80 Z" fill="#333" opacity="0.15"/>
+    <path d="M-70,-80 L-70,-60 Q-70,10 -50,20 L-50,80 Q-50,90 -40,90 L40,90 Q50,90 50,80 L50,20 Q70,10 70,-60 L70,-80 L30,-80 Q20,-50 -20,-50 Q-20,-50 -30,-80 Z"/>
+    <!-- Collar -->
+    <path d="M-30,-80 Q-10,-55 0,-60 Q10,-55 30,-80"/>
+    <!-- Sleeves -->
+    <path d="M-70,-60 L-95,-20 L-70,0"/>
+    <path d="M70,-60 L95,-20 L70,0"/>
+  </g>
+</svg>

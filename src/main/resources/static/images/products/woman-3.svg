@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f5f2f0"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cardigan -->
+    <path d="M-55,-85 L-80,-35 L-65,-15 L-50,-28 L-50,90 Q-50,95 -45,95 L45,95 Q50,95 50,90 L50,-28 L65,-15 L80,-35 L55,-85 L25,-85 Q10,-65 0,-70 Q-10,-65 -25,-85 Z" fill="#333" opacity="0.15"/>
+    <path d="M-55,-85 L-80,-35 L-65,-15 L-50,-28 L-50,90 Q-50,95 -45,95 L45,95 Q50,95 50,90 L50,-28 L65,-15 L80,-35 L55,-85 L25,-85 Q10,-65 0,-70 Q-10,-65 -25,-85 Z"/>
+    <!-- Open front -->
+    <path d="M-10,-70 Q-10,10 -10,95"/>
+    <path d="M10,-70 Q10,10 10,95"/>
+    <!-- V-neck -->
+    <path d="M-25,-85 Q-15,-65 -10,-70"/>
+    <path d="M25,-85 Q15,-65 10,-70"/>
+    <!-- Buttons -->
+    <circle cx="0" cy="-40" r="3" fill="#333"/>
+    <circle cx="0" cy="-10" r="3" fill="#333"/>
+    <circle cx="0" cy="20" r="3" fill="#333"/>
+    <!-- Ribbing -->
+    <path d="M-50,88 L-50,95" stroke-dasharray="3,3"/>
+    <path d="M-30,88 L-30,95" stroke-dasharray="3,3"/>
+    <path d="M30,88 L30,95" stroke-dasharray="3,3"/>
+    <path d="M50,88 L50,95" stroke-dasharray="3,3"/>
+  </g>
+</svg>

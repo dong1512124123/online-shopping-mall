@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f0f2f5"/>
+  <g transform="translate(200,250)" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Windbreaker -->
+    <path d="M-58,-82 L-88,-28 L-68,-8 L-55,-22 L-55,78 Q-55,85 -48,85 L48,85 Q55,85 55,78 L55,-22 L68,-8 L88,-28 L58,-82 L28,-82 Q15,-58 0,-63 Q-15,-58 -28,-82 Z" fill="#333" opacity="0.15"/>
+    <path d="M-58,-82 L-88,-28 L-68,-8 L-55,-22 L-55,78 Q-55,85 -48,85 L48,85 Q55,85 55,78 L55,-22 L68,-8 L88,-28 L58,-82 L28,-82 Q15,-58 0,-63 Q-15,-58 -28,-82 Z"/>
+    <!-- Stand collar -->
+    <path d="M-28,-82 L-28,-92 Q0,-88 28,-92 L28,-82"/>
+    <!-- Center zip -->
+    <path d="M0,-63 L0,85"/>
+    <!-- Zip pull -->
+    <rect x="-3" y="-30" width="6" height="8" rx="1" fill="#333" opacity="0.4"/>
+    <!-- Diagonal pocket zips -->
+    <path d="M-48,15 L-20,35" stroke-width="2"/>
+    <path d="M48,15 L20,35" stroke-width="2"/>
+    <!-- Elastic hem -->
+    <path d="M-55,78 Q-28,90 0,78 Q28,90 55,78" stroke-width="1.5" opacity="0.4"/>
+    <!-- Hood (behind) -->
+    <path d="M-28,-92 Q-35,-110 -15,-118 Q0,-122 15,-118 Q35,-110 28,-92" stroke-dasharray="4,3" opacity="0.5"/>
+  </g>
+</svg>
