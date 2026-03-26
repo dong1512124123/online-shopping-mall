@@ -19,7 +19,7 @@
     <description>FASHION STORE - Online Shopping Mall</description>
 
     <properties>
-        <java.version>18</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
